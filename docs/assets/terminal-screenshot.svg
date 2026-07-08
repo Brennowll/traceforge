@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="560" viewBox="0 0 920 560" role="img" aria-labelledby="title desc">
+  <title id="title">TraceForge terminal screenshot</title>
+  <desc id="desc">Example terminal output for traceforge run with request trace and statistics.</desc>
+  <rect width="920" height="560" rx="18" fill="#0f172a"/>
+  <rect y="0" width="920" height="42" rx="18" fill="#1e293b"/>
+  <circle cx="24" cy="21" r="7" fill="#ef4444"/>
+  <circle cx="48" cy="21" r="7" fill="#f59e0b"/>
+  <circle cx="72" cy="21" r="7" fill="#22c55e"/>
+  <text x="96" y="27" fill="#cbd5e1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">traceforge — terminal</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#e2e8f0">
+    <text x="28" y="78" fill="#38bdf8">$ go run ./cmd/traceforge run examples/basic.yml --entry api --requests 3 --seed 42</text>
+    <text x="28" y="122">REQUEST 001</text>
+    <text x="28" y="166">api -&gt; payments</text>
+    <text x="52" y="194" fill="#86efac">attempt 1: success in 88ms</text>
+    <text x="28" y="238">payments -&gt; fraud_check</text>
+    <text x="52" y="266" fill="#86efac">attempt 1: success in 60ms</text>
+    <text x="28" y="310">Result: <tspan fill="#86efac">success</tspan></text>
+    <text x="28" y="338">Total latency: 148ms</text>
+    <text x="28" y="366">Retries: 0   Timeouts: 0   Failures: 0</text>
+    <text x="28" y="420" fill="#facc15">STATS</text>
+    <text x="28" y="448">Total requests: 3   Success rate: 100.00%</text>
+    <text x="28" y="476">Min/Avg/Max latency: 148ms / 199.00ms / 254ms</text>
+    <text x="28" y="504">P50: 195ms   P95: 254ms   P99: 254ms</text>
+  </g>
+</svg>
