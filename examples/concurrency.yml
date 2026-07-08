@@ -1,0 +1,31 @@
+services:
+  api:
+    calls:
+      - service: payments
+        timeout_ms: 220
+        retry:
+          attempts: 1
+          backoff_ms: 30
+      - service: notifications
+        timeout_ms: 100
+
+  payments:
+    failure_rate: 0.1
+    latency_ms:
+      min: 80
+      max: 250
+    calls:
+      - service: fraud_check
+        timeout_ms: 160
+
+  fraud_check:
+    failure_rate: 0.05
+    latency_ms:
+      min: 40
+      max: 140
+
+  notifications:
+    failure_rate: 0.05
+    latency_ms:
+      min: 20
+      max: 90

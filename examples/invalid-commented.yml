@@ -1,0 +1,19 @@
+# Invalid examples for documentation/reference only.
+#
+# Cycle without max_depth:
+# services:
+#   api:
+#     calls:
+#       - service: payments
+#         timeout_ms: 100
+#   payments:
+#     calls:
+#       - service: api
+#         timeout_ms: 100
+#
+# Negative latency:
+# services:
+#   api:
+#     latency_ms:
+#       min: -1
+#       max: 10

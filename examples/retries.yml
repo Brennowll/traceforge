@@ -1,0 +1,13 @@
+services:
+  api:
+    calls:
+      - service: payments
+        timeout_ms: 200
+        retry:
+          attempts: 2
+          backoff_ms: 50
+
+  payments:
+    latency_ms:
+      min: 300
+      max: 300

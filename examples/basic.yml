@@ -1,0 +1,18 @@
+services:
+  api:
+    calls:
+      - service: payments
+        timeout_ms: 250
+
+  payments:
+    latency_ms:
+      min: 80
+      max: 180
+    calls:
+      - service: fraud_check
+        timeout_ms: 150
+
+  fraud_check:
+    latency_ms:
+      min: 40
+      max: 120
