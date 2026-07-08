@@ -1,0 +1,6 @@
+services:
+  traceforge:
+    build: .
+    volumes:
+      - .:/work
+    command: ["run", "examples/basic.yml", "--entry", "api"]
